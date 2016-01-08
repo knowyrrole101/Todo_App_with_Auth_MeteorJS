@@ -2,5 +2,6 @@
 Fully functioning todo application with authentication built in MeteorJS
 
 ##Features included:
-* CRUD Posts
+* Twitter Bootstrap front end
+* Create Read Destroy - To do items
 * User Account Creation/Authentication
