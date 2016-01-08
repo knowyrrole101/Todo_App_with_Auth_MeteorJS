@@ -1,6 +1,6 @@
-# Todo_App_with_Auth_MeteorJS
+# Todo Application built with Meteor JS
 Fully functioning todo application with authentication built in MeteorJS
 
-#Features included:
-*CRUD Posts
-*User Account Creation/Authentication
+##Features included:
+* CRUD Posts
+* User Account Creation/Authentication
