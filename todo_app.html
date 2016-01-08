@@ -1,0 +1,49 @@
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meteor Sample To Do Application</title>
+  </head>
+  <body>
+
+    <div class="container">
+      {{> loginButtons align='right'}}
+      <div class="header clearfix">
+        <h3 class="text-muted">Meteor To-Do's</h3>
+      </div>
+      <div class="row marketing">
+        <div class="col-lg-12">
+          {{>main}}
+        </div>
+      </div>
+      <hr>
+      <footer class="footer">
+        <p>&copy; 2016 Meteor.js App</p>
+      </footer>
+
+    </div>
+  </body>
+
+  <template name='main'>
+    {{#if currentUser}}
+    <form class='new-todo'>
+      <div class='form-group'>
+        <input type='text' name='text' placeholder='Type a Todo' class='form-control'>
+      </div>
+      <div class='form-group'>
+        <input type='submit' class='btn btn-success'>
+      </div>
+    </form>
+    <ul>
+      {{#each todos}}
+        <li class="{{#if checked}}checked{{/if}}">
+          <button class='delete-todo'>&times;</button>
+          <input type='checkbox' checked="{{checked}}" class='toggle-checked'>
+          <span class='text'>{{text}}</span>
+        </li>
+      {{/each}}
+    </ul>
+    {{else}}
+      Thanks for visiting Meteor To-Do's Please Sign Up for your Free Account!
+    {{/if}}
+  </template>
